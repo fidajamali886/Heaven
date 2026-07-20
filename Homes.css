@@ -1,0 +1,562 @@
+
+/* Full-screen loader */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Spinner style */
+    .spinner {
+      width: 90px;
+      height: 90px;
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid yellow;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    body{
+      overflow-x: hidden;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Main content hidden initially */
+    #main-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+ 
+
+.carousel-inner{
+  width:100%;
+ height: auto;
+ object-fit: cover;
+}
+
+/* .p{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: space-between;
+  font-size: small;
+} */
+.container-fluid{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    font-weight: bold;
+    background-color: white;
+   }
+  
+
+
+/*  Mobile (large): 480px – 767px */
+@media (min-width: 768px) and (max-width: 890px) {
+.offcanvas-body {
+  font-size:small;
+  }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+ .nav-item.dropdown .dropdown-menu {
+  font-size:small;
+    /* margin-left: -5%;    */
+  }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+.nav-item.dropdown {
+  font-size:small;
+    margin-left: -1.5%;   
+  }
+}
+
+
+.home-md-content{
+    text-align: center;
+    color: rgb(79, 83, 79);
+}
+
+
+
+  .abc{
+    margin-top: 10%;
+    margin-left: 3.7%;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  .abc a{
+    text-decoration: none;
+   color: black;
+  }
+  .abc a:hover{
+    color: rgb(24, 54, 185);
+  }
+  .long-line{
+    width: 20%; /* یا جتنی چوڑائی چاہیے */
+    height: 5px;
+    background-color: rgb(247, 243, 9);
+    margin-left: 40%;
+}
+.long-line1{
+    width: 14%; /* یا جتنی چوڑائی چاہیے */
+    height: 5px;
+    background-color: rgb(247, 243, 9);
+    margin-left: 43%;
+}
+.long-line2{
+    width: 9%; /* یا جتنی چوڑائی چاہیے */
+    height: 5px;
+    background-color: rgb(247, 243, 9);
+    margin-left: 46%;
+}
+
+
+.btn-custom{
+  padding: 5px 10px 5px 10px !important;
+  background-color: rgb(38, 43, 36) !important;
+  color: rgb(246, 250, 246) !important;
+  width: 200px !important;
+  height: 40px !important;
+  margin-left: 5%;
+  /* border-radius: 20px !important; */
+}
+.btn-custom:hover {
+  background-color: rgb(237, 240, 39) !important;
+  color: rgb(15, 15, 15)!important;
+}
+
+.main-container {
+  display: flex;
+}
+
+.carousel-container {
+  width: 75%;
+}
+
+   .navbar-toggler{
+  border: 2px solid rgb(151, 151, 156);
+  background-color: transparent;
+  box-shadow: rgb(175, 112, 29);
+   }
+   .carousel-item{
+    height: 100%;
+   }
+    .carousel-item img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+    }
+
+
+
+@media (min-width: 769px) {
+    .carousel-item img {
+    height: 550px;
+    object-fit: fill;  
+    }
+}
+
+    .top-caption{
+      top: 30%;
+      transform: translateY(-50%);> 
+    }
+    
+    .center-caption{
+      top: 50%;
+      transform: translateY(-50%);>
+
+    }
+   
+    @keyframes bgExpand {
+      0% {
+          background-size: 0% 100%;
+          background-position: right;
+      }
+      100% {
+          background-size: 100% 100%;
+          background-position: right;
+      }
+  }
+  .offcanvas{
+    width: 300px !important;
+  }
+  .animated-caption {
+      position: absolute;
+      bottom: 0;
+      margin-left: -15%;     
+      width: 100% ;
+      height: 100px;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to left, rgba(161, 84, 145, 0.4), rgba(161, 84, 145, 0.4));  
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: bgExpand 1.5s ease-in-out forwards;
+  }
+
+  
+  .navbar-brand img{
+    height: 50px;
+    width: 220px;
+    margin-left: 5%;
+    /* position: absolute; */
+    /* border: 2px solid rgb(155, 111, 184); */
+  }
+  .navbar-brand img:hover{
+    border: 2px solid rgb(148, 133, 190);
+    transform: scale(1.2); 
+
+  }
+
+   @media (min-width: 768px) and (max-width:1920px) {
+   .nav-item.dropdown:hover .dropdown-menu{
+   display: block;  }
+}
+
+@media (min-width: 768px) and (max-width: 1920px) {
+   .nav-item.dropdown .dropdown-menu{
+   display: none;
+   margin-left: -5%; 
+}
+}
+  .nav-item{
+  font-weight: bold; 
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      background-color: transparent; 
+      border: 2px solid rgb(252, 248, 248); 
+      border-radius: 50%; 
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+  }
+  .carousel-control-next {
+    left: 85% !important;
+  }
+  .carousel-control-prev {
+    /* left: 5% !important; */
+  }
+  /* Arrow icon ko hide karne ke liye */
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+      content: none;
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    width: 15px !important;
+    height: 15px !important;
+    color: white !important;
+    border-radius: 50% !important;
+    background-color: rgb(66, 185, 179) !important;
+    border: 5px solid white !important;
+    margin-bottom: 5% ;
+
+  }
+  .carousel-indicators [data-bs-target]:hover {
+    background-color: blue !important; /* Hover par red color */
+    opacity: 1 !important; /* Full visibility */
+    transition: background-color 0.3s ease-in-out;
+  }
+  .carousel-indicators .active {
+    background-color: blue !important; /* Active indicator ka color */
+  }
+  /* .carousel-item1 img{
+    margin-top: -12%;
+    margin-left: 5%;
+    width:10%;
+    height: 100px;
+    object-fit: cover; 
+    } */
+   
+ 
+
+  .dropdown-menu a{
+    color:  rgb(55, 50, 77);
+  
+  }
+  .dropdown-menu a:hover{
+    background-color: yellow;
+    color: black; 
+    border-radius: 0px;
+  }
+ 
+
+  /* Boxes */
+  .btn-custom{
+     padding: 5px 10px 5px 10px !important;
+    background-color: rgb(38, 43, 36) !important;
+    color: rgb(246, 250, 246) !important;
+    width: 130px !important;
+    height: 40px !important;
+    margin-left: 20%;
+    border-radius: 20px !important;
+  } 
+   .btn-custom:hover {
+    background-color: rgb(237, 240, 39) !important;
+    color: rgb(245, 250, 245)!important;
+    
+   
+  }
+  
+    .custom-box1{
+      background-color: transparent; /* ہلکا گرے بیک گراؤنڈ */
+      color: antiquewhite;
+      width: 150px;
+      padding: 20px;
+      margin-left: 40%;
+      border: 1px solid red;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+  
+    } 
+  
+  .custom-box a{
+    text-decoration: none;
+    color: aqua; 
+  }
+   
+  .card{
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    
+  }
+  .card img{
+    height: 200px;
+
+  }
+  .card:hover{
+   /* background-color:pink; */
+  } 
+  .card-title{
+    text-align: center;
+    font-weight: 750;
+    text-decoration: none;
+    color: rgb(34, 155, 23);
+  }
+  .card-title1{
+    font-weight: 750;
+  }
+
+  .card-title:hover{
+    color: rgba(229, 233, 9, 0.89);
+  }
+  .card-text{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: space-between;
+    font-size: medium;
+    text-align: center;
+    margin-top: 8%;
+  }
+   .row{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 50px;
+    
+  }
+  .footer-home {
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(61, 56, 56);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  .f-text{
+  font-weight: 700;
+  font-size: xx-large;
+  color: black;
+
+  }
+  
+  
+  .footer-a {
+    background-color: rgb(102, 127, 206);
+
+  }
+  .section-title{
+    color: rgb(165, 155, 155);
+  }
+  
+  
+   .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+  }
+  
+  .btn.btn-social:hover {
+    color: var(--dark);
+    /* background-color: red; */
+  }
+  
+  .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: rgb(247, 247, 242);
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+  }
+  
+  .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  
+  .btn.btn-link:hover {
+    letter-spacing: 2px;
+    box-shadow: none;
+    color: yellowgreen;
+    text-decoration: none;
+    
+  }
+  
+    
+  .btn-social i.fa-instagram {
+    /* background-color: #E1306C; */
+    color: blue;
+    width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* Facebook button color */
+  .btn-social i.fa-facebook {
+  color: blue;
+  width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* YouTube button color */
+  .btn-social i.fa-youtube {
+    /* background-color:blue; */
+    color: blue;
+    width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* LinkedIn button color */
+  .btn-social i.fa-whatsapp {
+    color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .btn-social i.fa-whatsapp:hover{
+    /* color: hsl(135, 94%, 49%); */
+  }
+  /* Hover effects for social buttons */
+  .btn-social:hover i{
+    transform: scale(1.2); Button grows slightly on hover
+  }
+  .btn-social:hover i{
+    color:  hwb(313 7% 14%);
+    background-color: yellow;
+  }
+
+  
+  .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+  }
+  
+  .copyright a {
+    color: var(--light);
+  }
+  
+  .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+  }
+  
+  .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+
+
+    
+
+
+    #backToTop {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* display: none; شروع میں چھپائیں */
+    font-size: 40px; /* `^` کا سائز بڑا کرنے کے لیے */
+    font-weight: bold; /* `^` کو bold کرنے کے لیے */
+    /* ٹیکسٹ کو بلکل سنٹر میں لانے کے لیے */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #backToTop:hover {
+    color:black;
+    background-color: yellow;
+  }
+  
+
+
+
+

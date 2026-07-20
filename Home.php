@@ -1,0 +1,537 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Haven Of The World</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="Home/Images/Haven-Logo4.jpg" rel="icon">
+
+    <!-- Custom CSS -->
+ <link rel="stylesheet" href="Homes.css">
+   
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+ 
+</head>
+<body>
+    
+     <!-- Loader -->
+          <!-- <br><br> -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Actual Page Content -->
+  <div id="main-content">
+    <!-- <h1>Welcome to My Website</h1> -->
+    <!-- <p>This is the main content of the page. </p> -->
+  </div>
+
+  <!-- Script to hide loader on page load -->
+  <script>
+    window.addEventListener('load', function () {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    });
+  </script>
+
+  
+ <!-- ✅ Navbar Start -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+
+    <!-- ✅ Brand Logo -->
+    <a class="navbar-brand" href="Home.php">
+      <img src="Home/Images/Haven-Logo1.jpg" alt="Logo" width="100">
+    </a>
+
+    <!-- ✅ Toggle Button for Offcanvas (Mobile View) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- ✅ Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a style="color:blue;"class="nav-link active" href="Home.php">Home</a>
+        </li>
+
+          <!-- Trekking Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active " href="#" role="button" data-bs-toggle="dropdown">Trekking</a>
+            <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="tour/K2-Ghandoghoro-Trek.php">K2 Ghandoghoro Trek</a></li>
+                    <li><a class="dropdown-item" href="tour/Gushing-La-Trek.php">Gushing La Trek</a></li>
+                    <li><a class="dropdown-item" href="tour/Machulo-La-Trek.php">Machulo La Trek</a></li>
+                    <li><a class="dropdown-item" href="tour/Five-8000-meters-Base-Trek.php">Five 8000 meters Base Trek</a></li>
+                    <li><a class="dropdown-item" href="tour/Mashabrum-Base-Trek.php">Mashabrum Base Trek </a></li>
+                    <li><a class="dropdown-item" href="tour/Spantik-Base-Trek.php">Spantik Base Trek </a></li>
+                    <li><a class="dropdown-item" href="tour/K-6-&-7-Lela-Peak-base-Trek.php">K-6 & 7 Lela Peak base Trek </a></li>
+                    <li><a class="dropdown-item" href="tour/Hunbroq-K2-View-Point-Trek.php">Hunbroq K2 View Point Trek </a></li>
+            </ul>
+          </li>
+
+          <!-- Mountaineering -->
+                <a class="nav-link active" href="tour/Mountaineering.php">   Mountaineering</a>
+                
+
+          <!-- Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Tours</a>
+            <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="tour/Skardu-Trip.php">  Skardu Trip </a></li>
+             <li><a class="dropdown-item" href="tour/Skardu-&-Hunza-Trip.php">Skardu & Hunza Trip </a></li>
+             <li><a class="dropdown-item" href="tour/Hunza-Trip.php">Hunza Trip </a></li>
+             <li><a class="dropdown-item" href="tour/Kalash-Chitral-Trip.php">Kalash Chitral Trip</a></li>
+            </ul>
+          </li>
+
+          <!-- Family Trips Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Family Trips</a>
+            <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="tour/4-Days-Family-Trip-around-Skardu.php">4 Days Family Trip around Skardu</a></li>
+               <li><a class="dropdown-item" href="tour/5-Days-Family-Trip-around-Skardu.php">5 Days Family Trip around Skardu</a></li>
+               <li><a class="dropdown-item" href="tour/6-Days-Family-Trip-around-Skardu.php">6 Days Family Trip around Skardu</a></li>
+               <li><a class="dropdown-item" href="tour/7-Days-Family-Trip-around-Skardu.php">7 Days Family Trip around Skardu </a></li>
+            </ul>
+          </li>
+
+          <!-- Customize Trips -->
+          <li class="nav-item">
+                  <a class="nav-link active" href="tour/Customize-Trips.php">Customize Trips</a>
+              </li>
+              <!-- Right side buttons -->
+<div class="d-flex align-items-center gap-3 mt-3 mt-md-0">
+    <?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true): ?>
+        <!-- Admin Dropdown -->
+        <div class="dropdown">
+            <a style=" width: 35px;height: 35px;background-color: #0d6efd; /* blue color */color: white;border-radius: 50%; /* fully round */display: flex;align-items: center;justify-content: center;text-decoration: none;font-size: 22px;"
+             class="btn btn-outline-primary btn-sm  circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user"></i>
+                  
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="Admin_Panel.php"> Admin Panel</a></li>
+                <li><a class="dropdown-item text-danger" href="logout.php"> Logout</a></li>
+            </ul>
+        </div>
+    <?php else: ?>
+        <!-- Login button -->
+        <a href="login.php" class="btn btn-outline-primary btn-sm"> Login</a>
+    <?php endif; ?>
+</div>
+        </ul>
+       
+       
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- ✅ Navbar End -->
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="Home/Images/17.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption top-caption animated-caption" >
+                <h1 class="  fw-bold">Mountains are  Calling You! <br> 
+                <p style="font-size:x-large;">Come and Explore Karakoran and Hamalia Part Of Gilgit-Baltistan</p> </h1> 
+
+            </div>
+            
+
+        </div>
+        <div class="carousel-item">
+            <img src="Home/Images/12.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption center-caption animated-caption" >
+               <h1 class="fw-bold">Your Dream Adventure is here! <br> 
+                <p style="font-size:x-large;">Trek to Baltoro or climb the majestic Mountains of Gilgit-Baltistan</p> </h1> 
+
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <img src="Home/Images1/6.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+            <img src="Home/Images1/7.jpg" class="d-block w-100" alt="Slide 4">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/8.jpg" class="d-block w-100" alt="Slide 5">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/9.jpg" class="d-block w-100" alt="Slide 6">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/3.jpg" class="d-block w-100" alt="Slide 7">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/11.jpg" class="d-block w-100" alt="Slide 8">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/12.jpg" class="d-block w-100" alt="Slide 9">
+        </div>
+         <div class="carousel-item">
+            <img src="Home/Images1/13.jpg" class="d-block w-100" alt="Slide 10">
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="6"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="7"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="8"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="9"></button>
+
+    </div>
+
+</div>
+
+    <div class="container mt-4">
+<!-- row-1 -->
+            <div class="home-md-content">
+                <h1>Trekking</h1>
+          </div>     
+          <div class="long-line1"></div>       
+          <br><br><br>
+        <div style="margin-left:0%; margin-right:0%; margin-top:-5%;" class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                <div class="card">
+                      <img src="Home/Images1/1.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/K2-Ghandoghoro-Trek.php">
+                        <h5 class="card-title1">Baltoro K2 Gondogoro Trek</h5></a>
+                        <p style="margin-top:-7%; "  class="card-text">K2 Baltoro Trek is the most famous mountain trip around the world.This route offers the best mountains views, thrilling.....</p>
+                        <a href="tour/K2-Ghandoghoro-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images/10.jpg" >
+                    <div class="card-body">
+                         <a class="card-title" href="tour/Gushing-La-Trek.php">
+                        <h5 class="card-title1">Gushing La Trek</h5></a>
+                        <p class="card-text">K2 Baltoro Trek is the most famous mountain trip around the world.This route offers the best mountains views, thrilling.....</p>
+                        <a href="" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images/5.jpg" >
+                    <div class="card-body">
+                       <a class="card-title" href="tour/Machulo-La-Trek.php">
+                        <h5 class="card-title1">Machulo La Trek</h5></a>
+                        
+                        <p class="card-text">Machulo La is considered the shortest scheduled and cheap trekking route to view K2 Mountain.....</p>
+                       <br>
+                        <a href="tour/Machulo-La-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/2.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Five-8000-meters-Base-Trek.php">
+                        <h5 class="card-title1">The Big Five</h5></a>
+                      <p class="card-text">Pakistan is home for 5 eight thousanders out of 14 in the world! The big five trek offers a lifetime.....</p>
+                     <br>
+                      <a href="tour/Five-8000-meters-Base-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/5.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Mashabrum-Base-Trek.php">
+                        <h5 class="card-title1">Mashabrum Base Trek</h5></a>
+                      <p class="card-text">Mashabrum or K-1 has two faces, one is north Baltoro Side while the 2nd is south Hushe valley side.....</p>
+                     <br>
+                      <a href="tour/Mashabrum-Base-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/3.jpg" >
+                    <div class="card-body">
+                     <a class="card-title" href="tour/Spantik-Base-Trek.php">
+                     <h5 class="card-title1">Spantik Base Trek</h5></a>
+                      <p class="card-text">This trek offers a moderate yet mostly steep trekking trail with combined view of glaciers and green pasture side.....</p>
+                     <br>
+                      <a href="tour/Spantik-Base-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/6.jpg" >
+                    <div class="card-body">
+                      <a class="card-title" href="tour/K-6-&-7-Lela-Peak-base-Trek.php">
+                        <h5 class="card-title1">K-7 | Leila Peak Trek</h5></a>
+                      <p class="card-text">K-6 and K-7 are famous peaks located in Charaksa valley glacier in Hushe valley while Leila Peak is the most beautiful....</p>
+                      <a href="K-6-&-7-Lela-Peak-base-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/7.jpg" >
+                    <div class="card-body">
+                      <a class="card-title" href="tour/Hunbroq-K2-View-Point-Trek.php">
+                        <h6 class="card-title1">Hunbroq K2 View Point Trek</h6></a>
+                      <p  class="card-text">Hunbroq is a summer pasture in Hushe so is a base camp of K2 view point of Hunbroq Peak/Pass.....</p>
+                     <br>
+                      <a href="tour/Hunbroq-K2-View-Point-Trek.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="home-md-content">
+                <h1>Tours</h1>
+          </div>     
+          <div class="long-line2"></div>       
+          <br><br><br>
+       
+
+        <div style="margin-left:0%; margin-right:0%; margin-top:-5%;" class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                <div class="card">
+                      <img src="Home/Images1/8.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Skardu-Trip.php">
+                        <h5 class="card-title1">Skardu Trip</h5></a>
+                        <p class="card-text">Skardu is capital of Baltistan Division in Gilgit-Baltistan. Skardu is located in between the Karakorum and.....</p>
+                        <a href="tour/Skardu-Trip.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/9.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Skardu-&-Hunza-Trip.php">
+                        <h5 class="card-title1">Skardu & Hunza Trip</h5></a>
+                        <p class="card-text">Hunza valley is top listed destination while Skardu is capital of adventure tourism. Both regions have.....</p>
+                        <a href="tour/Skardu-&-Hunza-Trip.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/12.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Hunza-Trip.php">
+                        <h5 class="card-title1">Hunza Trip</h5></a>
+                        <p class="card-text">Hunza is an iconic name of Pakistan’s tourism industry. It has an amazing natural and cultural beauty......</p>
+                        <a href="tour/Hunza-Trip.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/10.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Kalash-Chitral-Trip.php">
+                        <h5 class="card-title1">Kalash Chitral Trip </h5></a>
+                      <p class="card-text">Kalash valley is located in Chital District Huinkush range of Pakistan. It’s a unique tribe have a.....</p>
+                      <a href="tour/Kalash-Chitral-Trip.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>           
+        </div>
+               
+          <br><br><br>
+        <div style="margin-left:0%; margin-right:0%; margin-top:-5%;" class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                <div class="card">
+                      <img src="Home/Images1/11.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Corporate-Trips.php">
+                        <h5 class="card-title1">Corporate Trips</h5></a>
+                        <p class="card-text">Skardu-Baltistan region offers best opportunities for corporate retreat and employees incentives trips as well as family & friends get-together.....</p>
+                        <a href="tour/Corporate-Trips.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/13.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Family-Trips.php">
+                        <h5 class="card-title1">Family Trips</h5></a>
+                        <p class="card-text">Skardu Baltistan nestled between Himalaya and Karakorum that offers breathtaking views! It provides amazing destinations for family trips, honeymoon.....</p>
+                        <a href="tour/Family-Trips.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images/9.jpg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Mountaineering.php">
+                        <h5 class="card-title1">Mountaineering</h5></a>
+                        <p class="card-text">Skardu is the capital of adventure tourism and the gateway to all major and famous mountaineering expeditions. We are based at Skardu and.....</p>
+                        <a href="tour/Mountaineering.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                      <img src="Home/Images1/15.jpeg" >
+                    <div class="card-body">
+                        <a class="card-title" href="tour/Transports.php">
+                        <h5 class="card-title1">Transport</h5></a>
+                      <p class="card-text">We offer transport services for sightseeing trips around Skardu, Khaplu, Hunza valleys & e.t.c. We provide all kind of Parado & native drivers.....</p>
+                    <br>
+                      <a href="tour/Transports.php" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+<!-- Footer Start -->
+    <div class="container-1 bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class=" col-lg-4 col-md-8">
+                    <div class="footer-a rounded p-4">
+                        <a class="footer-home" href="Home.php"><h1 class="f-text text-uppercase mb-3">Heaven of The World </h1></a>
+                        <p class="text-white mb-0">"Based in Skardu, we are a dedicated trekking company with deep roots in Baltistan, offering expertly guided adventures into the heart of the Karakoram Mountains. Run by some of the region’s most experienced local guides, we specialize in crafting personalized and corporate trekking experiences you can truly trust."
+
+                            
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-4">
+                    
+                    
+                    <h4 class="section-title text-start  text-uppercase mb-4">Services</h4>
+                    <a class="btn btn-link" href="tour/Trekking-&-Expeditions.php">Trekking & Expeditions</a>
+                    <a class="btn btn-link" href="tour/Tour-Guide.php">Tour Guide</a>
+                    <a class="btn btn-link" href="tour/Home-Hotel.php">Home | Hotel </a>
+                    <a class="btn btn-link" href="tour/Transports.php">Transport </a>
+                     <a class="btn btn-link" href="tour/Camping.php">Camping</a>
+
+                </div>
+                <div class="col-lg-5 ">
+                    <div class="row gy-5 g-4">
+                        <div class="col-lg-6 col-md-8">
+                            <h4 class="section-title text-start  text-uppercase mb-4">Information</h4>
+                            <a class="btn btn-link" href="tour/About-Company.php">About Company</a>
+                            <a class="btn btn-link" href="tour/Equipment-Checklist.php">Equipment Checklist </a>
+                            <a class="btn btn-link" href="">Support</a>
+                            <div class="d-flex pt-5">
+                      
+                                <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/fidajamali3/" target="_blank"><i class="fab fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-light btn-social" href="https://web.facebook.com/fida.jamali.403599" target="_blank" ><i class="fab fa-facebook"></i></a>
+                                <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/watch?v=zudor7Lgcrc" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-light btn-social" href="https://wa.me/+923129722994" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4">
+                            <h4 class="section-title text-start  text-uppercase mb-4">Contact </h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 3129722994 <br> 
+                        <p style="margin-left: 30px;">+92 3427269551</p></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@heavenofworld.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Zain Turabi Chowk , Skardu , Baltistan</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy;  www.Heavenofworld.com, All Right Reserved. 
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a style="text-decoration:none;"href="">Designed & Developed By ➤</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="backToTop" onclick="scrollToTop()">^</button>
+
+    </div>
+    <!-- Footer End -->
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+   <!-- <h1>Scroll Down and Click the Button to Go Back to Top</h1> -->
+    
+
+   <script>
+       window.onscroll = function() {
+           let button = document.getElementById("backToTop");
+           if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+               button.style.display = "block";
+           } else {
+               button.style.display = "none";
+           }
+       };
+
+       function scrollToTop() {
+           window.scrollTo({ top: 0, behavior: "smooth" });
+       }
+   </script>
+
+</body>
+</html>
