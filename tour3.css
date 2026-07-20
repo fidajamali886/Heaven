@@ -1,0 +1,540 @@
+/* Full-screen loader */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Spinner style */
+    .spinner {
+      width: 90px;
+      height: 90px;
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid yellow;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+   body{
+    overflow-x: hidden;
+    
+   }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Main content hidden initially */
+    #main-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    /* loder end */
+
+    .circle {
+  width: 40px;
+  height: 40px;
+  background-color: #0d6efd; /* blue color */
+  color: white;
+  border-radius: 50%; /* fully round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.carousel-inner{
+  width:100%;
+ height: 650;
+ margin-top: 1%;
+ object-fit: cover;
+
+}
+.p{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: space-between;
+  font-size: small;
+}
+.container-fluid{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    font-weight: bold;
+    background-color: white;
+   }
+  
+
+
+/* ✅ Mobile (large): 480px – 767px */
+@media (min-width: 768px) and (max-width: 890px) {
+.offcanvas-body {
+  font-size:small;
+  }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+ .nav-item.dropdown .dropdown-menu {
+  font-size:small;
+    /* margin-left: -5%;    */
+  }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+.nav-item.dropdown {
+  font-size:small;
+    margin-left: -1.5%;   
+  }
+}
+
+
+
+
+  .abc{
+    margin-top: 10%;
+    margin-left: 3.7%;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  .abc a{
+    text-decoration: none;
+   color: black;
+  }
+  .abc a:hover{
+    color: rgb(24, 54, 185);
+  }
+  .long-line {
+    width: 94%; /* یا جتنی چوڑائی چاہیے */
+    height: 2px;
+    background-color: rgb(212, 170, 170);
+    margin-left: 3.7%;
+    margin-top: 1%;
+}
+.long-line1 {
+    width: 95%; /* یا جتنی چوڑائی چاہیے */
+    height: 2px;
+    background-color: rgb(212, 170, 170);
+    /* margin-left: 5%; */
+    margin-top: -3%;
+}
+
+
+@media (max-width: 991px) {
+  .abd {
+    margin-left: 5%;
+
+  }
+}
+
+@media (max-width: 1192px ) {
+  .abc {
+    margin-left: 5%;
+  }
+}
+.abe{
+  margin-left: 5%;
+  
+}
+.latest a{
+  text-decoration: none;
+  color: black;
+}
+.latest a:hover{
+  color: rgba(226, 150, 8, 0.904);
+}
+
+.btn-custom{
+  padding: 5px 10px 5px 10px !important;
+  background-color: rgb(38, 43, 36) !important;
+  color: yellow !important;
+  width: 90% !important;
+  height: 40px !important;
+  margin-left: 2%;
+  font-weight: bold !important;
+  /* border-radius: 20px !important; */
+}
+.btn-custom:hover {
+  background-color: rgb(237, 240, 39) !important;
+  color: rgb(15, 15, 15)!important;
+}
+
+.main-container {
+  display: flex;
+}
+
+   .navbar-toggler{
+  border: 2px solid rgb(151, 151, 156);
+  background-color: transparent;
+  box-shadow: rgb(175, 112, 29);
+
+  
+   }
+   
+  .carousel-item img{
+    margin-left: 5%;
+    width:70%;
+    height: auto;
+    object-fit: contain; 
+    }
+    
+    
+    
+    @keyframes bgExpand {
+      0% {
+          background-size: 0% 100%;
+          background-position: right;
+      }
+      100% {
+          background-size: 100% 100%;
+          background-position: right;
+      }
+  }
+  .offcanvas{
+    width: 300px !important;
+  }
+  
+
+  
+  .navbar-brand img{
+    height: 50px;
+    /* max-width: 100%; */
+    width: 220px;
+    /* margin-top: -5%; */
+    margin-left: 5%;
+    /* position: absolute; */
+  
+    /* border: 2px solid rgb(155, 111, 184); */
+  }
+  .navbar-brand img:hover{
+    /* transform: scale(1.2);  */
+  }
+
+@media (min-width: 768px) and (max-width:1920px) {
+   .nav-item.dropdown:hover .dropdown-menu{
+   display: block;  }
+}
+
+@media (min-width: 768px) and (max-width: 1920px) {
+   .nav-item.dropdown .dropdown-menu{
+   display: none;
+   margin-left: -5%; 
+}
+}
+  .nav-item{
+  font-weight: bold;
+  /* font-size: larger; */
+  /* max-width: 100%; */
+  /* width:auto; */
+
+  
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      background-color: transparent; /* Background transparent kar diya */
+      border: 2px solid rgb(252, 248, 248); /* White border diya */
+      border-radius: 50%; /* Isse circular shape milegi */
+      /* padding: 10px; */
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+  }
+  .carousel-control-next {
+    left: 85% !important;
+  }
+  .carousel-control-prev {
+    left: 5% !important;
+  }
+  /* Arrow icon ko hide karne ke liye */
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+      content: none;
+  }
+  
+  .carousel-indicators {
+    margin-left: 18% !important; 
+}
+  .carousel-indicators [data-bs-target] {
+    width: 15px !important;
+    height: 15px !important;
+    color: white !important;
+    border-radius: 50% !important;
+    background-color: rgb(66, 185, 179) !important;
+    border: 5px solid white !important;
+    margin-bottom: 0% !important ;
+    /* margin-left: 40% !important; */
+
+  
+  }
+  .carousel-item1 img{
+    margin-top: -12%;
+    margin-left: 5%;
+    width:10%;
+    height: 100px;
+    object-fit: cover; 
+    }
+   
+ 
+  .carousel-indicators [data-bs-target]:hover {
+    background-color: blue !important; /* Hover par red color */
+    opacity: 1 !important; /* Full visibility */
+    transition: background-color 0.3s ease-in-out;
+  }
+  .carousel-indicators .active {
+    background-color: blue !important; /* Active indicator ka color */
+  }
+   
+  .navbar-brand img:hover{
+    border: 2px solid rgb(148, 133, 190);
+  }
+  .dropdown-menu a{
+    color:  rgb(55, 50, 77);
+  
+  }
+  .dropdown-menu a:hover{
+    background-color: yellow;
+    color: black; 
+    border-radius: 0px;
+  }
+ 
+  .footer {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 50px;
+    
+  }
+  
+  .footer-home {
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(61, 56, 56);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  .f-text{
+  font-weight: 700;
+  font-size: xx-large;
+  color: black;
+
+  }
+
+  .footer-a {
+    background-color: rgb(102, 127, 206);
+    /* margin-top: -10%; */
+
+  }
+  .section-title{
+    color: rgb(165, 155, 155);
+  }
+  
+  
+   .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+  }
+  
+  .btn.btn-social:hover {
+    color: var(--dark);
+    /* background-color: red; */
+  }
+  
+  .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: rgb(243, 243, 240);
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+  }
+  
+  .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  
+  .btn.btn-link:hover {
+    letter-spacing: 2px;
+    box-shadow: none;
+    color: yellow;
+    text-decoration: none;
+    
+  }
+  
+    
+  .btn-social i.fa-instagram {
+    /* background-color: #E1306C; */
+    color: blue;
+    width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* Facebook button color */
+  .btn-social i.fa-facebook {
+  color: blue;
+  width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* YouTube button color */
+  .btn-social i.fa-youtube {
+    /* background-color:blue; */
+    color: blue;
+    width: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* LinkedIn button color */
+  .btn-social i.fa-whatsapp {
+    color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .btn-social i.fa-whatsapp:hover{
+    /* color: hsl(135, 94%, 49%); */
+  }
+  /* Hover effects for social buttons */
+  .btn-social:hover i{
+    transform: scale(1.2); Button grows slightly on hover
+    
+  }
+  .btn-social:hover i{
+    color:  hwb(313 7% 14%);
+    background-color: yellow;
+    
+  }
+
+  
+  .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+  }
+  
+  .copyright a {
+    color: var(--light);
+  }
+  
+  .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+  }
+  
+  .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+
+
+      /* form style */
+  
+    input[type="text"], input[type="email"], input[type="date"] {
+      width: 95%;
+      padding: 8px;
+      border-radius:8px; 
+      margin-bottom: 10px;
+      margin-left:2.5%;
+    }
+    input[type="about"]{
+      width: 95%;
+      padding: 20px;
+      border-radius:8px; 
+      margin-bottom: 10px;
+      margin-left:2.5%;
+    }
+    input[type="submit"] {
+      padding: 8px 20px; 
+      border: none;font-weight: bold; 
+      border-radius: 20px; 
+      background-color: black; 
+      color: yellow; 
+      margin-left: 2.5%;
+    }
+    
+   input[type="submit"]:hover{
+    background-color:yellow; color:black; font-weight: bold;
+
+   }
+    
+     label {
+            margin-left: 2.5%;
+        }
+
+        form {
+          
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+        }
+       
+    #error { color: red; font-weight: bold; }
+    
+       /* form style end */
+
+
+    #backToTop {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; 
+    font-size: 40px; 
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #backToTop:hover {
+    color:black;
+    background-color: yellow;
+  }
+  
+
+
+
+
